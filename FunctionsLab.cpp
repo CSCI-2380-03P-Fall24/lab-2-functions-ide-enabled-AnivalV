@@ -40,7 +40,7 @@ void replaceVariable(int array[], int start, int end, int value) {
 //write a function called printArray to print out the elements of the given array
 //output: nothing
 //input: the array of integers and its size
-void printArray(int size, int array[]) {
+void printArray(int array[], int size) {
 	for (int i = 0; i < size; i++) {
 		cout << array[i] << " ";
 	}
