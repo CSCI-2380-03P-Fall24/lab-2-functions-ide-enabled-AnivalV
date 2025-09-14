@@ -19,7 +19,6 @@ int locateSmallest(int array[], int start, int end) {
 			index = i;
 		}
 	}
-	cout << index << endl;
 	return index;
 }
 //Write the function called replaceVariable in the given interval such that 
@@ -33,9 +32,7 @@ void replaceVariable(int array[], int start, int end, int value) {
 		if (array[i] == value) {
 			array[i] = 1000;
 		}
-		cout << array[i] << " ";
 	}
-	cout << endl;
 }
 
 
@@ -47,7 +44,6 @@ void printArray(int size, int array[]) {
 	for (int i = 0; i < size; i++) {
 		cout << array[i] << " ";
 	}
-	cout << endl;
 }
 
 
@@ -71,6 +67,5 @@ int sumOdds(int array[], int start, int end) {
 			total += array[i];
 		}
 	}
-	cout << total;
 	return total;
 }
