@@ -11,11 +11,9 @@ using namespace std; // making life easier so that we do not need to use std::ci
 
 
 int locateSmallest(int array[], int start, int end) {
-	int first = array[0];
 	int index = start;
 	for (int i = start; i < end; i++) {
-		if (first > array[i]) {
-			first = array[i];
+		if (array[index] > array[i]) {
 			index = i;
 		}
 	}
@@ -27,9 +25,9 @@ int locateSmallest(int array[], int start, int end) {
 //     an int which is the starting index of search,
 //     an int which is the ending point of searchspace
 // function: Search in the array from given start to end index and replace the given target value with 1000
-void replaceVariable(int array[], int start, int end, int value) {
-	for (int i = start; i < end; i++) {
-		if (array[i] == value) {
+void replaceVariable(int array[], int target, int start, int end) {
+	for (int i = start; i <= end; i++) {
+		if (array[i] == target) {
 			array[i] = 1000;
 		}
 	}
@@ -40,10 +38,11 @@ void replaceVariable(int array[], int start, int end, int value) {
 //write a function called printArray to print out the elements of the given array
 //output: nothing
 //input: the array of integers and its size
-void printArray(int array[], int size) {
-	for (int i = 0; i < size; i++) {
+void printArray(int array[], int end) {
+	for (int i = 0; i < end; i++) {
 		cout << array[i] << " ";
 	}
+	cout << endl;
 }
 
 
@@ -67,5 +66,6 @@ int sumOdds(int array[], int start, int end) {
 			total += array[i];
 		}
 	}
+	cout << total << " ";
 	return total;
 }
